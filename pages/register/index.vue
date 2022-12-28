@@ -33,8 +33,8 @@
       >
         Войти
       </button>
-      <p class="login__new">Новый пользователь?
-        <NuxtLink class="blue" to="/register">Зарегистрироваться</NuxtLink>
+      <p class="login__new">Уже есть аккаунт?
+        <NuxtLink class="blue" to="/register">Авторизуйтесь</NuxtLink>
       </p>
       <p class="login__description">Ввод данных подтверждает ваше согласие с
         <NuxtLink class="blue" to="/">политикой конфиденциальности</NuxtLink>
