@@ -1,7 +1,7 @@
 <template>
-  <div class="login-wrapper">
-    <div class="login">
-      <h2 class="login__title">Вход</h2>
+  <div class="reg-wrapper">
+    <div class="reg">
+      <h2 class="reg__title">Регистрация</h2>
       <input
           v-model.trim="name"
           type="text"
@@ -28,15 +28,15 @@
           placeholder="Подтвердите пароль"
       >
       <button
-          @click="goLogin()"
-          class="login__button"
+          @click="goReg()"
+          class="reg__button"
       >
-        Войти
+        Зарегистрироваться
       </button>
-      <p class="login__new">Уже есть аккаунт?
+      <p class="reg__new">Уже есть аккаунт?
         <NuxtLink class="blue" to="/register">Авторизуйтесь</NuxtLink>
       </p>
-      <p class="login__description">Ввод данных подтверждает ваше согласие с
+      <p class="reg__description">Ввод данных подтверждает ваше согласие с
         <NuxtLink class="blue" to="/">политикой конфиденциальности</NuxtLink>
         и
         <NuxtLink class="blue" to="/">обработкой персональных данных.</NuxtLink>
@@ -54,7 +54,7 @@ let email = ref<string>('');
 let password = ref<string>('');
 let repeatPassword = ref<string>('');
 
-async function goLogin() {
+async function goReg() {
   if (
       name.value &&
       phone.value &&
@@ -86,12 +86,12 @@ async function goLogin() {
 
 <style scoped lang="scss">
 
-.login-wrapper {
+.reg-wrapper {
   min-height: 85vh;
   width: 100%;
   @include myFlex($jc: center);
 
-  .login {
+  .reg {
     @include myFlex($ai: start, $fd: column);
     padding: 30px;
     background-color: white;
@@ -100,7 +100,7 @@ async function goLogin() {
     height: 661px;
     width: 427px;
 
-    .login__title {
+    .reg__title {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 800;
@@ -124,7 +124,7 @@ async function goLogin() {
       border-bottom: 1px solid grey;
     }
 
-    .login__button {
+    .reg__button {
       font-family: 'Montserrat';
       padding: 10px 60px;
       border: 2px solid $myBlue;
@@ -143,7 +143,7 @@ async function goLogin() {
       }
     }
 
-    .login__new {
+    .reg__new {
       font-family: 'Montserrat';
       font-weight: 400;
       font-size: 16px;
@@ -151,7 +151,7 @@ async function goLogin() {
       color: #222222;
     }
 
-    .login__description {
+    .reg__description {
       font-family: 'Montserrat';
       font-weight: 400;
       font-size: 12px;
