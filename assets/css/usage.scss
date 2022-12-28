@@ -1,0 +1,16 @@
+$myBlue: #0075FF;
+$myDark: #282828;
+$myGrey: #F9F9F9;
+
+@mixin myFlex($jc:space-between, $ai:center, $fd:row){
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+
+@mixin myGrid($c:2, $r:1){
+  display: grid;
+  grid-template-columns: repeat($c, 1fr);
+  grid-template-rows: repeat($r, 1fr);
+}
